@@ -1,6 +1,6 @@
 {
   "01"
-          :["北欧风情","htmls/products/img/CGbeioufengqing.jpg"],
+          :["北欧风情","img/CGbeioufengqing.jpg"],
   "02"
-          :["艾菲尔","htmls/products/img/CGaifeier.jpg"]
+          :["艾菲尔","img/CGaifeier.jpg"]
 }

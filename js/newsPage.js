@@ -18,6 +18,7 @@ function pageNext(data){
 $.ajax({
     url : 'htmls/news/newsDetail.txt',
     success : function(data){
+        console.log(1);
         pageNext(data)
     }
 });

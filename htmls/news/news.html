@@ -1,88 +1,286 @@
-<div class="banner">
-    <img src="htmls/news/img/newsBanner.jpg"/>
-</div>
-<div class="container" data-newsPage="">
-    <div class="allWidth">
-        <h2>
-            企业新闻
-        </h2>
-        <p>致力于实现中国家庭厨房梦! 12年来,我们从未止步···</p>
-    </div>
-    <div class="newM">
-        <div data-newsnub="14">
-            <img src="htmls/news/img/newsMain1.jpg"/>
-            <h2>定制美好生活！嘉宝厨柜2017年度新品发布大会，震撼来袭！</h2>
-        </div>
-        <div data-newsnub="13">
-            <img src="htmls/news/img/newsMain2.png"/>
-            <h2>从心出发，定制美好生活！嘉宝厨柜2017年年会圆满落幕</h2>
-        </div>
-        <div  data-newsnub="12">
-            <img src="htmls/news/img/newsMain3.png"/>
-            <h2>为爱定制 嘉宝感恩 | 2016嘉宝年度大型感恩盛典巅峰开启！</h2>
-        </div>
-        <div  data-newsnub="11">
-            <img src="htmls/news/img/newsMain4.png"/>
-            <h2>【厨房大牌大聚惠】一站式定制厨柜& 厨电的历史性机会</h2>
-        </div>
-        <div  data-newsnub="10">
-            <img src="htmls/news/img/newsMain5.jpg">
-            <h2>跨年钜惠 贺岁献礼 —2016嘉宝厨柜【贺岁狂欢季】震撼来袭!</h2>
-        </div>
-        <div  data-newsnub="9">
-            <img src="htmls/news/img/newsMain6.jpg">
-            <h2>中国家居奥斯卡盛会|嘉宝厨柜衣柜包揽两项全国巅峰大奖！</h2>
-        </div>
-        <div  data-newsnub="8">
-            <img src="htmls/news/img/newsMain7.jpg">
-            <h2>中国家居奥斯卡盛会|嘉宝厨柜衣柜包揽两项全国巅峰大奖！</h2>
-        </div>
-        <div  data-newsnub="7">
-            <img src="htmls/news/img/newsMain8.jpg">
-            <h2>原来定制厨柜可以这么美！高档装修，必选定制！</h2>
-        </div>
-        <div  data-newsnub="6">
-            <img src="htmls/news/img/newsMain9.jpg">
-            <h2>​12年专注定制，一路领跑，成就嘉宝【中国厨柜定制大师】</h2>
-        </div>
-        <div  data-newsnub="5">
-            <img src="htmls/news/img/newsMain10.jpg">
-            <h2>嘉宝厨柜·2016【匠心·极致·超越自我】新春年会华丽绽放！</h2>
-        </div>
-        <div  data-newsnub="4">
-            <img src="htmls/news/img/newsMain11.jpg">
-            <h2>巅峰盛宴,华丽落幕!—嘉宝厨柜【2015年度客户感恩答谢盛典】完美收官！</h2>
-        </div>
-        <div  data-newsnub="3">
-            <img src="htmls/news/img/newsMain12.jpg">
-            <h2>高端访谈 | 做湖南家居制造业的骄傲！——长沙晚报专访嘉宝橱柜董事长肖文波</h2>
-        </div>
-        <div  data-newsnub="2">
-            <img src="htmls/news/img/newsMain13.jpg">
-            <h2>嘉宝橱柜荣获2014“中国定制家居行业十强示范企业”殊荣</h2>
-        </div>
-        <div  data-newsnub="1">
-            <img src="htmls/news/img/newsMain14.jpg"/>
-            <h2>【重磅新闻】嘉宝厨柜与意大利米兰理工大学设计学院签署战略合作，打造世界级的创新研发平台！</h2>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="Keywords" content="定制衣柜,定制家具,全屋家具定制,家具,橱柜,嘉宝橱柜" />
+    <meta name="Description" content="定制衣柜品牌嘉宝橱柜官方全屋定制家具网上商城,定制衣柜及其配套定制家具直销网,为客户提供家具、衣柜、整体衣柜、榻榻米、书柜等全屋家具定制,及五大免费家具定制测量" />
+    <title>嘉宝厨柜【官方网站】-嘉宝新闻</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/index.css" />
+    <link rel="stylesheet" href="../../css/page.css"/>
+    <script src="../../js/jquery-1.10.1.min.js"></script>
     <script>
-        var pageNub ;
-        var pageNubMax ;
-        $('div[data-newsnub]').on('click',function(){
-            // 传参到下次异步刷新页面
-            pageNub = $(this).attr('data-newsnub');
-            function loadnews(data){
-                $('.container')
-                        .attr('data-newsPage',pageNub)
-                        .html(data);
+        $(function(){
+            //  获取 url   new分页号字段
+            var Url = window.location.href;
+            var index = Url.indexOf('?')+1;
+                // 获取分页号数字
+            var newsNub = Url.substr(index+10);
+
+            //  news 主页判定
+            if(index != 0 ) {
+                var newsDe = Url.substr(index);
+                var newsDeNub = newsDe.slice(10);
+
+                // news data
+                $.ajax({
+                    url : newsDe + '.html',
+                    success : function(data){
+                        insertNewsdata(data);
+                    }
+                });
+
             }
-            $.ajax({
-                url : 'htmls/news/newsDetail'+ pageNub +'.html',
-                success : function(data){
-                    loadnews(data)
+
+            function insertNewsdata(data){
+                $('.container').html(data);
+
+                //news next & pre page
+
+                $.ajax({
+                    url : "newsDetail.txt",
+                    dataType: 'json',
+                    success : function(data){
+                        newsPages(data);
+                    }
+                })
+
+            }
+
+            function newsPages(data){
+                if( newsDeNub == data.length){
+                    $('.nextPage').find('span').html('当前为最新新闻');
+                    $('.prePage')
+                            .attr('href','?newsDetail'+(parseInt(newsDeNub)-1))
+                            .find('span').html(data[newsDeNub-2]);
+                }else if( newsDeNub == 1){
+                    $('.prePage').find('span').html('最后一篇新闻啦');
+                    $('.nextPage')
+                            .attr('href','?newsDetail'+(parseInt(newsDeNub)+1))
+                            .find('span').html(data[newsDeNub]);
+                }else{
+                    $('.nextPage')
+                            .attr('href','?newsDetail'+(parseInt(newsDeNub)+1))
+                            .find('span').html(data[newsDeNub]);
+                    $('.prePage')
+                            .attr('href','?newsDetail'+(parseInt(newsDeNub)-1))
+                            .find('span').html(data[newsDeNub-2]);
                 }
-            });
+            }
         })
     </script>
+</head>
+
+<body>
+<div class="mubu">
+    <div class="mubuinner">
+        <ul>
+            <li>
+                <a data-flag="true">首页</a>
+                <div class="list2nd shouye clearfix">
+                    <a href="../products/chugui.html">橱柜定制</a>
+                    <a href="../products/quanwu.html">全屋定制</a>
+                    <a href="../products/dianqi.html">厨房电器</a>
+                    <a href="../products/shuicao.html">厨房水槽</a>
+                </div>
+            </li>
+            <li>
+                <a data-flag="true" class="dianshang">电商平台</a>
+                <div class="list2nd clearfix">
+                    <a href="https://jiabaochugui.tmall.com" target="_blank">天猫旗舰店</a>
+                    <a href="http://mall.jd.com/index-656949.html" target="_blank">京东旗舰店</a>
+                    <a href="https://shop105792262.taobao.com" target="_blank">淘宝直营店</a>
+                </div>
+            </li>
+            <li>
+                <a data-flag="true">关于嘉宝</a>
+                <div class="list2nd">
+                    <a href="../about/about.html">企业介绍</a>
+                    <a href="../about/pinpai.html">品牌实力</a>
+                    <a href="../about/contact.html">联系我们</a>
+                    <a href="../about/gongchen.html">工程合作</a>
+                    <a href="../about/human.html">加入我们</a>
+                </div>
+            </li>
+            <li>
+                <a data-flag="true">产品中心</a>
+                <div class="list2nd">
+                    <a href="../products/chugui.html">橱柜定制</a>
+                    <a href="../products/mumen.html">木门定制</a>
+                    <a href="../products/quanwu.html">全屋定制</a>
+                    <a href="../products/dianqi.html">厨房电器</a>
+                    <a href="../products/shuicao.html">厨房水槽</a>
+                    <a href="../products/yigui.html">衣柜定制</a>
+                </div>
+            </li>
+            <li>
+                <a data-flag="true">客服中心</a>
+                <div class="list2nd">
+                    <a href="../services/dingzhi.html">定制流程</a>
+                    <a href="../services/wangdian.html">服务网点</a>
+                    <a href="../services/services.html">售后服务</a>
+                </div>
+            </li>
+            <li>
+                <a href="../join/join.html" class="join">品牌加盟</a>
+            </li>
+            <li>
+                <a href="../news/news.html" class="news">企业新闻</a>
+            </li>
+        </ul>
+        <div>
+            <a href="tel:400-0188-608">品牌热线:400-0188-608</a>
+        </div>
+    </div>
 </div>
+<header class="clearfix">
+    <a class="logo returnHome"></a>
+    <div class="topMenus">
+        <span class="fa fa-bars"></span>
+    </div>
+</header>
+<div class="main0">
+
+    <div class="banner">
+        <img src="img/newsBanner.jpg"/>
+    </div>
+    <div class="container">
+        <div class="allWidth">
+            <h2>
+                企业新闻
+            </h2>
+            <p>致力于实现中国家庭厨房梦! 12年来,我们从未止步···</p>
+        </div>
+        <div class="newM">
+            <a href="?newsDetail14">
+                <img src="img/newsMain1.jpg"/>
+                <h2>定制美好生活！嘉宝厨柜2017年度新品发布大会，震撼来袭！</h2>
+            </a>
+            <a href="?newsDetail13">
+                <img src="img/newsMain2.png"/>
+                <h2>从心出发，定制美好生活！嘉宝厨柜2017年年会圆满落幕</h2>
+            </a>
+            <a href="?newsDetail12">
+                <img src="img/newsMain3.png"/>
+                <h2>为爱定制 嘉宝感恩 | 2016嘉宝年度大型感恩盛典巅峰开启！</h2>
+            </a>
+            <a href="?newsDetail11">
+                <img src="img/newsMain4.png"/>
+                <h2>【厨房大牌大聚惠】一站式定制厨柜& 厨电的历史性机会</h2>
+            </a>
+            <a href="?newsDetail10">
+                <img src="img/newsMain5.jpg">
+                <h2>跨年钜惠 贺岁献礼 —2016嘉宝厨柜【贺岁狂欢季】震撼来袭!</h2>
+            </a>
+            <a href="?newsDetail9">
+                <img src="img/newsMain6.jpg">
+                <h2>中国家居奥斯卡盛会|嘉宝厨柜衣柜包揽两项全国巅峰大奖！</h2>
+            </a>
+            <a href="?newsDetail8">
+                <img src="img/newsMain7.jpg">
+                <h2>中国家居奥斯卡盛会|嘉宝厨柜衣柜包揽两项全国巅峰大奖！</h2>
+            </a>
+            <a href="?newsDetail7">
+                <img src="img/newsMain8.jpg">
+                <h2>原来定制厨柜可以这么美！高档装修，必选定制！</h2>
+            </a>
+            <a href="?newsDetail6">
+                <img src="img/newsMain9.jpg">
+                <h2>​12年专注定制，一路领跑，成就嘉宝【中国厨柜定制大师】</h2>
+            </a>
+            <a href="?newsDetail5">
+                <img src="img/newsMain10.jpg">
+                <h2>嘉宝厨柜·2016【匠心·极致·超越自我】新春年会华丽绽放！</h2>
+            </a>
+            <a href="?newsDetail4">
+                <img src="img/newsMain11.jpg">
+                <h2>巅峰盛宴,华丽落幕!—嘉宝厨柜【2015年度客户感恩答谢盛典】完美收官！</h2>
+            </a>
+            <a href="?newsDetail3">
+                <img src="img/newsMain12.jpg">
+                <h2>高端访谈 | 做湖南家居制造业的骄傲！——长沙晚报专访嘉宝橱柜董事长肖文波</h2>
+            </a>
+            <a href="?newsDetail2">
+                <img src="img/newsMain13.jpg">
+                <h2>嘉宝橱柜荣获2014“中国定制家居行业十强示范企业”殊荣</h2>
+            </a>
+            <a href="?newsDetail1">
+                <img src="img/newsMain14.jpg"/>
+                <h2>【重磅新闻】嘉宝厨柜与意大利米兰理工大学设计学院签署战略合作，打造世界级的创新研发平台！</h2>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="mainfoot">
+    <p>嘉宝客户服务中心 · 24小时服务热线</p>
+    <a class="call400" href="tel:400-0188-608">400-018-8608</a>
+</div>
+<div class="mainbottom">
+    <ul>
+        <li>
+            <a data-flag="true" class="dianshang">电商平台</a>
+            <div class="list2nd clearfix">
+                <a href="https://jiabaochugui.tmall.com" target="_blank">天猫旗舰店</a>
+                <a href="http://mall.jd.com/index-656949.html" target="_blank">京东旗舰店</a>
+                <a href="https://shop105792262.taobao.com" target="_blank">淘宝直营店</a>
+            </div>
+        </li>
+
+        <li>
+            <a data-flag="true">关于嘉宝</a>
+            <div class="list2nd">
+                <a href="../about/about.html">企业介绍</a>
+                <a href="../about/pinpai.html">品牌实力</a>
+                <a href="../about/contact.html">联系我们</a>
+                <a href="../about/gongchen.html">工程合作</a>
+                <a href="../about/human.html">加入我们</a>
+            </div>
+        </li>
+        <li>
+            <a data-flag="true">产品中心</a>
+            <div class="list2nd">
+                <a href="../products/chugui.html">橱柜定制</a>
+                <a href="../products/mumen.html">木门定制</a>
+                <a href="../products/quanwu.html">全屋定制</a>
+                <a  href="../products/dianqi.html">厨房电器</a>
+                <a href="../products/shuicao.html">厨房水槽</a>
+                <a href="../products/yigui.html">衣柜定制</a>
+            </div>
+        </li>
+        <li>
+            <a data-flag="true">客服中心</a>
+            <div class="list2nd">
+                <a href="../services/dingzhi.html">定制流程</a>
+                <a href="../services/wangdian.html">服务网点</a>
+                <a href="../services/services.html">售后服务</a>
+            </div>
+        </li>
+        <li>
+            <a href="../join/join.html" class="join">品牌加盟</a>
+        </li>
+        <li>
+            <a href="../news/news.html" class="news">企业新闻</a>
+        </li>
+    </ul>
+</div>
+<footer>
+    <ul>
+        <li>
+            <a href="../../index.html">官网首页</a>
+        </li>
+        <li>
+            <a href="tel:4000188608">预约量尺</a>
+        </li>
+        <li>
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">在线咨询</a>
+        </li>
+        <li>
+            <a class="toTop">返回顶部</a>
+        </li>
+    </ul>
+</footer>
+<script src="../../js/common.js"></script>
+</body>
+</html>

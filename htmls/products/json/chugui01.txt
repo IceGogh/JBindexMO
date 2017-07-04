@@ -1,12 +1,12 @@
 {
   "01"
-          :["爱情海","htmls/products/img/CGaiqinghai.jpg"],
+          :["爱情海","img/CGaiqinghai.jpg"],
   "02"
-          :["米兰印象","htmls/products/img/CGmilanyinxiang.jpg"],
+          :["米兰印象","img/CGmilanyinxiang.jpg"],
   "03"
-          :["浪漫首尔","htmls/products/img/CGlangmanshouer.jpg"],
+          :["浪漫首尔","img/CGlangmanshouer.jpg"],
   "04"
-          :["奥特莱斯","htmls/products/img/CGaotelaisi.jpg"],
+          :["奥特莱斯","img/CGaotelaisi.jpg"],
   "05"
-          :["水木年华","htmls/products/img/CGshuimunianhua.jpg"]
+          :["水木年华","img/CGshuimunianhua.jpg"]
 }

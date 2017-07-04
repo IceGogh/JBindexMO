@@ -61,6 +61,7 @@
 
 			}else{
 
+
 				$('.mubu').slideUp();
 				$('.list2nd').slideUp();
 				$('.list2nd').prev()
@@ -81,19 +82,10 @@
 
 
 
-	//  return home page
-	$('.returnHome').on('click',function(){
-		$('.transfCss').attr('href','css/transf.css');
-		// 移除专题页样式
-		$('.zhuantiCss').remove();
-		$('.toTop').trigger('click');
-	});
-
-
 
 	// toTop
 	$('.toTop').on('click',function(){
-		$('html,body').animate({scrollTop:0},0)
+		$('html,body').animate({scrollTop:0},200)
 	});
 
 
@@ -103,155 +95,155 @@
 	* ---loading page...
 	* */
 
-	Transforing($('a[data-keys]'));
-
-
-	// click <a> main Transforing
-	function Transforing(elm){
-
-		// 移除专题页样式
-		$('.zhuantiCss').remove();
-
-		elm.on('click',function(){
-			var Keys = $(this).attr('data-keys');
-			KeyWord = Keys.substr(Keys.indexOf('/')+1);
-			//  先判断 mubu 是否放下状态
-			if(!flag2){
-				$('.topMenus span').trigger("click");
-			}
-
-			$.ajax({
-				url:'htmls/'+ Keys +'.html',
-				async:false,		 // makesure all loading complete
-				success:function(data){
-					callbk(data)
-				}
-			});
-
-			// 判断 点击跳转的层级  index ?  chugui？  chuguiList?
-			if($(this).attr('data-selectFlag')){
-				var Nub = $(this).attr('data-selectFlag');
-				$('a[data-pagenub="'+ Nub +'"]').trigger("click");
-			}
-
-
-			function callbk(data){
-				$('.transfCss').attr('href','css/transfNo.css');
-				$('.main0').html(data);
-
-				//  直接写入 head  防止多次 ajax 多次异步加载
-/*				var CssLink = document.createElement('link');
-				CssLink.rel = "stylesheet";
-				CssLink.type = "text/css";
-				CssLink.href = "css/page.css";
-				document.getElementsByTagName('head')[0].appendChild(CssLink);*/
-
-				//$('html,body').animate({scrollTop:0},500);
-
-				$('.list2nd').slideUp();
-				$('.list2nd').prev()
-					.attr('data-flag','true')
-					.css({backgroundImage:' url("img/mainbottom.png")'});
-
-				// all refresh to top
-				$('.toTop').promise().done(function(){
-					$(this).trigger('click');
-				});
-
-				//  after ajax re-loading , the web refresh
-				Transforing($('a[data-keys]'));
-			}
-		});
-	}
-
-	/*
-	* htmls-- products --- loding detail
-	*/
-	// load img detail
-	function loadDetail(elm){
-		//	click a data-page choose the detail list
-		$('a[data-page]').on('click',function(){
-			var pageNub = $(this).attr('data-pageNub');		/* 计数 */
-			var product = $(this).attr('data-page');		/* productList分类名 */
-			var products = pageNub-0+1;						/* 初始改 0 为 1 */
-
-			$.ajax({
-				url:'htmls/products/' + product +'.html',
-				success:function(data){
-					showList(data);
-				}
-			});
-			function showList(data){
-				$('.main0').html(data);
-				$('.pageSelect a')
-					.removeClass('selProduct')
-					.eq(pageNub).addClass('selProduct');
-
-				var productsMain = '';
-				var Length = 1;
-
-				$.ajax({
-					url : 'htmls/products/json/'+ KeyWord + (products < 9 ? "0"+products : products) +'.txt',
-					dataType :'json',
-					success : function(data){
-						showIMG(data);
-					}
-				});
-				function showIMG(Jsondata){
-					for( var item in Jsondata){
-						Length ++;
-					}
-					for(var i=1; i<Length; i++){
-						productsMain += '<a>'+
-							'<img src="' + Jsondata[(i <=9 ? "0"+i : i)][1]+'" data-productsDetail="'+ product + '" data-imgNub="'+ products + '" data-imgNubNo="' + i +'"/>'+
-							'</a>'+
-							'<h2>'+ Jsondata[(i <=9 ? "0"+i : i)][0] +'</h2>';
-					}
-
-					$('.allWidth').html(productsMain);
-					//  after ajax re-loading , the web refresh
-					Transforing($('a[data-keys]'));
-					loadDetail($('a[data-page]'));
-
-
-					// 跳转详情    chugui -- chuguilist -- productsDetail
-					var Nub;
-					var NubNo;
-					var DetailUrl='';
-					loadingproductDetail();
-					function loadingproductDetail(){
-						$('img[data-productsDetail]').on('click', function(){
-							var Detail = $(this).attr('data-productsDetail');
-							Nub = $(this).attr('data-imgNub')-1;
-							NubNo = $(this).attr('data-imgNubNo')-1;
-							$.ajax({
-								url :'htmls/products/json/'+ Detail +'.txt',
-								dataType:'json',
-								success:function(data){
-									showingproductDetail(data)
-								}
-							})
-						})
-					}
-
-					function showingproductDetail(imgData){
-						for(var i=0; i<imgData[Nub][NubNo].length; i++){
-							DetailUrl += '<img src="'+ imgData[Nub][NubNo][i] +'"/>'
-						}
-						$('.allWidth').html(DetailUrl);
-
-
-						// all refresh to top
-						$('.toTop').promise().done(function(){
-							$(this).trigger('click');
-						})
-					}
-				}
-			}
-		});
-	}
-
-
+//	Transforing($('a[data-keys]'));
+//
+//
+//	// click <a> main Transforing
+//	function Transforing(elm){
+//
+//		// 移除专题页样式
+//		$('.zhuantiCss').remove();
+//
+//		elm.on('click',function(){
+//			var Keys = $(this).attr('data-keys');
+//			KeyWord = Keys.substr(Keys.indexOf('/')+1);
+//			//  先判断 mubu 是否放下状态
+//			if(!flag2){
+//				$('.topMenus span').trigger("click");
+//			}
+//
+//			$.ajax({
+//				url:'htmls/'+ Keys +'.html',
+//				async:false,		 // makesure all loading complete
+//				success:function(data){
+//					callbk(data)
+//				}
+//			});
+//
+//			// 判断 点击跳转的层级  index ?  chugui？  chuguiList?
+//			if($(this).attr('data-selectFlag')){
+//				var Nub = $(this).attr('data-selectFlag');
+//				$('a[data-pagenub="'+ Nub +'"]').trigger("click");
+//			}
+//
+//
+//			function callbk(data){
+//				$('.transfCss').attr('href','css/transfNo.css');
+//				$('.main0').html(data);
+//
+//				//  直接写入 head  防止多次 ajax 多次异步加载
+///*				var CssLink = document.createElement('link');
+//				CssLink.rel = "stylesheet";
+//				CssLink.type = "text/css";
+//				CssLink.href = "css/page.css";
+//				document.getElementsByTagName('head')[0].appendChild(CssLink);*/
+//
+//				//$('html,body').animate({scrollTop:0},500);
+//
+//				$('.list2nd').slideUp();
+//				$('.list2nd').prev()
+//					.attr('data-flag','true')
+//					.css({backgroundImage:' url("img/mainbottom.png")'});
+//
+//				// all refresh to top
+//				$('.toTop').promise().done(function(){
+//					$(this).trigger('click');
+//				});
+//
+//				//  after ajax re-loading , the web refresh
+//				Transforing($('a[data-keys]'));
+//			}
+//		});
+//	}
+//
+//	/*
+//	* htmls-- products --- loding detail
+//	*/
+//	// load img detail
+//	function loadDetail(elm){
+//		//	click a data-page choose the detail list
+//		$('a[data-page]').on('click',function(){
+//			var pageNub = $(this).attr('data-pageNub');		/* 计数 */
+//			var product = $(this).attr('data-page');		/* productList分类名 */
+//			var products = pageNub-0+1;						/* 初始改 0 为 1 */
+//
+//			$.ajax({
+//				url:'htmls/products/' + product +'.html',
+//				success:function(data){
+//					showList(data);
+//				}
+//			});
+//			function showList(data){
+//				$('.main0').html(data);
+//				$('.pageSelect a')
+//					.removeClass('selProduct')
+//					.eq(pageNub).addClass('selProduct');
+//
+//				var productsMain = '';
+//				var Length = 1;
+//
+//				$.ajax({
+//					url : 'htmls/products/json/'+ KeyWord + (products < 9 ? "0"+products : products) +'.txt',
+//					dataType :'json',
+//					success : function(data){
+//						showIMG(data);
+//					}
+//				});
+//				function showIMG(Jsondata){
+//					for( var item in Jsondata){
+//						Length ++;
+//					}
+//					for(var i=1; i<Length; i++){
+//						productsMain += '<a>'+
+//							'<img src="' + Jsondata[(i <=9 ? "0"+i : i)][1]+'" data-productsDetail="'+ product + '" data-imgNub="'+ products + '" data-imgNubNo="' + i +'"/>'+
+//							'</a>'+
+//							'<h2>'+ Jsondata[(i <=9 ? "0"+i : i)][0] +'</h2>';
+//					}
+//
+//					$('.allWidth').html(productsMain);
+//					//  after ajax re-loading , the web refresh
+//					Transforing($('a[data-keys]'));
+//					loadDetail($('a[data-page]'));
+//
+//
+//					// 跳转详情    chugui -- chuguilist -- productsDetail
+//					var Nub;
+//					var NubNo;
+//					var DetailUrl='';
+//					loadingproductDetail();
+//					function loadingproductDetail(){
+//						$('img[data-productsDetail]').on('click', function(){
+//							var Detail = $(this).attr('data-productsDetail');
+//							Nub = $(this).attr('data-imgNub')-1;
+//							NubNo = $(this).attr('data-imgNubNo')-1;
+//							$.ajax({
+//								url :'htmls/products/json/'+ Detail +'.txt',
+//								dataType:'json',
+//								success:function(data){
+//									showingproductDetail(data)
+//								}
+//							})
+//						})
+//					}
+//
+//					function showingproductDetail(imgData){
+//						for(var i=0; i<imgData[Nub][NubNo].length; i++){
+//							DetailUrl += '<img src="'+ imgData[Nub][NubNo][i] +'"/>'
+//						}
+//						$('.allWidth').html(DetailUrl);
+//
+//
+//						// all refresh to top
+//						$('.toTop').promise().done(function(){
+//							$(this).trigger('click');
+//						})
+//					}
+//				}
+//			}
+//		});
+//	}
+//
+//
 	//  zhuanti page
 
 	zhuanti();
