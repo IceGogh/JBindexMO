@@ -11,38 +11,7 @@
     <link rel="stylesheet" href="../../css/index.css" />
     <link rel="stylesheet" href="../../css/page.css"/>
     <script src="../../js/jquery-1.10.1.min.js"></script>
-    <script>
-        $(function(){
-            var Url = window.location.href;
-            var ProKey = Url.indexOf('/products')+10;
-            var ProKeyIn = Url.substr(ProKey);
-            var ProkeysIndex = ProKeyIn.indexOf('?');
-
-            //  get products key words & products nub
-            var ProKeys = ProKeyIn.substr(0,ProkeysIndex-9);
-            var ProNub = ProKeyIn.substr(ProkeysIndex+1);
-
-
-            // ajax load products list
-            $.ajax({
-                url : 'json/'+ ProKeys + ProNub +'.txt',
-                dataType : 'json',
-                success : function(data){
-                    productsList(data)
-                }
-            });
-
-            function productsList(data){
-                var proListHtml = '';
-                for ( var i in data){
-                    proListHtml += '<a><img src="'+ data[i][1] +'" href="#"></a>' +
-                            '<h2>'+ data[i][0] +'</h2>';
-                };
-                $('.allWidth').html(proListHtml);
-            }
-
-        })
-    </script>
+    <script src="js/pro.js"></script>
 </head>
 
 <body>
@@ -151,14 +120,14 @@
         橱柜定制
     </div>
     <div class="pageSelect clearfix">
-        <a data-page="chuguiList" data-pageNub="0">现代简约</a>
-        <a data-page="chuguiList" data-pageNub="1">现代时尚</a>
-        <a data-page="chuguiList" data-pageNub="2">简欧风格</a>
-        <a data-page="chuguiList" data-pageNub="3">中式风格</a>
-        <a data-page="chuguiList" data-pageNub="4">实木经典</a>
-        <a data-page="chuguiList" data-pageNub="5">法式风格</a>
-        <a data-page="chuguiList" data-pageNub="6">美式风格</a>
-        <a data-page="chuguiList" data-pageNub="7">北欧风格</a>
+        <a href="chuguiList.html?list=01">现代简约</a>
+        <a href="chuguiList.html?list=02">现代时尚</a>
+        <a href="chuguiList.html?list=03">简欧风格</a>
+        <a href="chuguiList.html?list=04">中式风格</a>
+        <a href="chuguiList.html?list=05">实木经典</a>
+        <a href="chuguiList.html?list=06">法式风格</a>
+        <a href="chuguiList.html?list=07">美式风格</a>
+        <a href="chuguiList.html?list=08">北欧风格</a>
     </div>
     <div class="allWidth">
         <!--动态添加 list -->

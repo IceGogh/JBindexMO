@@ -1,8 +1,8 @@
 {
   "01"
-          :["托斯卡纳系列","htmls/products/img/QWtuosikana.jpg"],
+          :["托斯卡纳系列","img/QWtuosikana.jpg"],
   "02"
-          :["佛罗伦萨系列","htmls/products/img/QWfoluolunsa.jpg"],
+          :["佛罗伦萨系列","img/QWfoluolunsa.jpg"],
   "03"
-          :["北美风情系列","htmls/products/img/QWbeimeifengqing.jpg"]
+          :["北美风情系列","img/QWbeimeifengqing.jpg"]
 }

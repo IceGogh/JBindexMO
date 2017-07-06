@@ -1,8 +1,8 @@
 {
   "01"
-          :["华帝油烟机","htmls/products/img/DQhuadi01.jpg"],
+          :["华帝油烟机","img/DQhuadi01.jpg"],
   "02"
-          :["华帝燃气灶","htmls/products/img/DQhuadi02.jpg"],
+          :["华帝燃气灶","img/DQhuadi02.jpg"],
   "03"
-          :["华帝消毒柜","htmls/products/img/DQhuadi03.jpg"]
+          :["华帝消毒柜","img/DQhuadi03.jpg"]
 }

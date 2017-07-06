@@ -52,7 +52,7 @@
 					HideMain.className='HidenM';
 					HideMain.rel = "stylesheet";
 					HideMain.type = "text/css";
-					HideMain.href = "css/mubuHide.css";
+					HideMain.href = "http://localhost:63342/Aweb/JBindexMO/css/mubuHide.css";
 					document.getElementsByTagName('head')[0].appendChild(HideMain);
 					$('.zhuantiCss').remove();
 				});
@@ -245,33 +245,4 @@
 //
 //
 	//  zhuanti page
-
-	zhuanti();
-	function zhuanti(){
-		$('a[data-zhuanti]').on('click',function(){
-			var keyWord = $(this).attr('data-zhuanti');
-			$.ajax({
-				url : 'htmls/zhuanti/' + keyWord + '.html',
-				success : function(data){
-					loadZhanti(data)
-				}
-			})
-		})
-	}
-	function loadZhanti(data){
-		$('.mainZhuanti').html(data);
-		var zhuantiCss = document.createElement('link');
-		zhuantiCss.className='zhuantiCss';
-		zhuantiCss.rel = "stylesheet";
-		zhuantiCss.type = "text/css";
-		zhuantiCss.href = "css/zhuanti.css";
-		document.getElementsByTagName('head')[0].appendChild(zhuantiCss);
-		$('html,body').animate({scrollTop:0},0)
-	}
-
-
-
-
-
-
 

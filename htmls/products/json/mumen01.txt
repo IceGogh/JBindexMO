@@ -1,12 +1,12 @@
 {
   "01"
-          :["MG001","htmls/products/img/MM0101.jpg"],
+          :["MG001","img/MM0101.jpg"],
   "02"
-          :["MG002","htmls/products/img/MM0102.jpg"],
+          :["MG002","img/MM0102.jpg"],
   "03"
-          :["MG003","htmls/products/img/MM0103.jpg"],
+          :["MG003","img/MM0103.jpg"],
   "04"
-          :["MG004","htmls/products/img/MM0104.jpg"],
+          :["MG004","img/MM0104.jpg"],
   "05"
-          :["MG005","htmls/products/img/MM0105.jpg"]
+          :["MG005","img/MM0105.jpg"]
 }

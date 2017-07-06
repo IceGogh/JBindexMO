@@ -1,10 +1,10 @@
 {
   "01"
-          :["MS001","htmls/products/img/YG0801.jpg"],
+          :["MS001","img/YG0801.jpg"],
   "02"
-          :["MS002","htmls/products/img/YG0802.jpg"],
+          :["MS002","img/YG0802.jpg"],
   "03"
-          :["MS003","htmls/products/img/YG0803.jpg"],
+          :["MS003","img/YG0803.jpg"],
   "04"
-          :["MS004","htmls/products/img/YG0804.jpg"]
+          :["MS004","img/YG0804.jpg"]
 }

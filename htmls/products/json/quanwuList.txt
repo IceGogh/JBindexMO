@@ -3,9 +3,9 @@
       [
 
               [
-                "htmls/products/img/quanwu/quanwu010101.jpg",
-                "htmls/products/img/quanwu/quanwu010102.jpg",
-                "htmls/products/img/quanwu/quanwu010103.jpg"
+                "img/quanwu/quanwu010101.jpg",
+                "img/quanwu/quanwu010102.jpg",
+                "img/quanwu/quanwu010103.jpg"
               ]
 
       ],
@@ -13,9 +13,9 @@
       [
 
               [
-                "htmls/products/img/quanwu/quanwu020101.jpg",
-                "htmls/products/img/quanwu/quanwu010102.jpg",
-                "htmls/products/img/quanwu/quanwu010103.jpg"
+                "img/quanwu/quanwu020101.jpg",
+                "img/quanwu/quanwu010102.jpg",
+                "img/quanwu/quanwu010103.jpg"
               ]
 
 
@@ -24,30 +24,30 @@
       [
 
               [
-                "htmls/products/img/quanwu/quanwu030101.jpg",
-                "htmls/products/img/quanwu/quanwu010102.jpg",
-                "htmls/products/img/quanwu/quanwu010103.jpg"
+                "img/quanwu/quanwu030101.jpg",
+                "img/quanwu/quanwu010102.jpg",
+                "img/quanwu/quanwu010103.jpg"
               ]
 
       ],
 
       [
               [
-                "htmls/products/img/quanwu/quanwu040101.jpg",
-                "htmls/products/img/quanwu/quanwu010102.jpg",
-                "htmls/products/img/quanwu/quanwu010103.jpg"
+                "img/quanwu/quanwu040101.jpg",
+                "img/quanwu/quanwu010102.jpg",
+                "img/quanwu/quanwu010103.jpg"
               ],
 
               [
-                "htmls/products/img/quanwu/quanwu040201.jpg",
-                "htmls/products/img/quanwu/quanwu010102.jpg",
-                "htmls/products/img/quanwu/quanwu010103.jpg"
+                "img/quanwu/quanwu040201.jpg",
+                "img/quanwu/quanwu010102.jpg",
+                "img/quanwu/quanwu010103.jpg"
               ],
 
               [
-                "htmls/products/img/quanwu/quanwu040301.jpg",
-                "htmls/products/img/quanwu/quanwu010102.jpg",
-                "htmls/products/img/quanwu/quanwu010103.jpg"
+                "img/quanwu/quanwu040301.jpg",
+                "img/quanwu/quanwu010102.jpg",
+                "img/quanwu/quanwu010103.jpg"
               ]
 
       ],
@@ -55,9 +55,9 @@
       [
 
               [
-                "htmls/products/img/quanwu/quanwu050101.jpg",
-                "htmls/products/img/quanwu/quanwu010102.jpg",
-                "htmls/products/img/quanwu/quanwu010103.jpg"
+                "img/quanwu/quanwu050101.jpg",
+                "img/quanwu/quanwu010102.jpg",
+                "img/quanwu/quanwu010103.jpg"
               ]
 
       ],
@@ -65,9 +65,9 @@
       [
 
               [
-                "htmls/products/img/quanwu/quanwu060101.jpg",
-                "htmls/products/img/quanwu/quanwu010102.jpg",
-                "htmls/products/img/quanwu/quanwu010103.jpg"
+                "img/quanwu/quanwu060101.jpg",
+                "img/quanwu/quanwu010102.jpg",
+                "img/quanwu/quanwu010103.jpg"
               ]
 
       ],
@@ -75,21 +75,21 @@
       [
 
               [
-                "htmls/products/img/quanwu/quanwu070101.jpg",
-                "htmls/products/img/quanwu/quanwu010102.jpg",
-                "htmls/products/img/quanwu/quanwu010103.jpg"
+                "img/quanwu/quanwu070101.jpg",
+                "img/quanwu/quanwu010102.jpg",
+                "img/quanwu/quanwu010103.jpg"
               ],
 
               [
-                "htmls/products/img/quanwu/quanwu070201.jpg",
-                "htmls/products/img/quanwu/quanwu010102.jpg",
-                "htmls/products/img/quanwu/quanwu010103.jpg"
+                "img/quanwu/quanwu070201.jpg",
+                "img/quanwu/quanwu010102.jpg",
+                "img/quanwu/quanwu010103.jpg"
               ],
 
               [
-                "htmls/products/img/quanwu/quanwu070301.jpg",
-                "htmls/products/img/quanwu/quanwu010102.jpg",
-                "htmls/products/img/quanwu/quanwu010103.jpg"
+                "img/quanwu/quanwu070301.jpg",
+                "img/quanwu/quanwu010102.jpg",
+                "img/quanwu/quanwu010103.jpg"
               ]
 
       ],
@@ -97,9 +97,9 @@
       [
 
               [
-                "htmls/products/img/quanwu/quanwu080101.jpg",
-                "htmls/products/img/quanwu/quanwu010102.jpg",
-                "htmls/products/img/quanwu/quanwu010103.jpg"
+                "img/quanwu/quanwu080101.jpg",
+                "img/quanwu/quanwu010102.jpg",
+                "img/quanwu/quanwu010103.jpg"
               ]
 
       ]

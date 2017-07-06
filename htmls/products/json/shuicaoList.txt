@@ -3,12 +3,12 @@
       [
 
               [
-                "htmls/products/img/shuicao/shuicao010101.jpg"
+                "img/shuicao/shuicao010101.jpg"
               ],
 
 
               [
-                "htmls/products/img/shuicao/shuicao010201.jpg"
+                "img/shuicao/shuicao010201.jpg"
               ]
 
       ],
@@ -16,12 +16,12 @@
       [
 
               [
-                "htmls/products/img/shuicao/shuicao020101.jpg"
+                "img/shuicao/shuicao020101.jpg"
               ],
 
 
               [
-                "htmls/products/img/shuicao/shuicao020201.jpg"
+                "img/shuicao/shuicao020201.jpg"
               ]
 
       ],
@@ -29,11 +29,11 @@
       [
 
               [
-                "htmls/products/img/shuicao/shuicao030101.jpg"
+                "img/shuicao/shuicao030101.jpg"
               ],
 
               [
-                "htmls/products/img/shuicao/shuicao030201.jpg"
+                "img/shuicao/shuicao030201.jpg"
               ]
       ]
 

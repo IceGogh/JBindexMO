@@ -1,4 +1,4 @@
 {
   "01"
-          :["阿尔卑斯系列","htmls/products/img/QWaerbeisi.jpg"]
+          :["阿尔卑斯系列","img/QWaerbeisi.jpg"]
 }
