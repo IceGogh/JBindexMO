@@ -52,7 +52,7 @@
 					HideMain.className='HidenM';
 					HideMain.rel = "stylesheet";
 					HideMain.type = "text/css";
-					HideMain.href = "http://localhost:63342/Aweb/JBindexMO/css/mubuHide.css";
+					HideMain.href = "http://m.siemensgabor.com/css/mubuHide.css";
 					document.getElementsByTagName('head')[0].appendChild(HideMain);
 					$('.zhuantiCss').remove();
 				});
