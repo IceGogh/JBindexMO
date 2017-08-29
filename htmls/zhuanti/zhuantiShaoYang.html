@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta name="Keywords" content="定制衣柜,定制家具,全屋家具定制,家具,橱柜,嘉宝橱柜" />
     <meta name="Description" content="定制衣柜品牌嘉宝橱柜官方全屋定制家具网上商城,定制衣柜及其配套定制家具直销网,为客户提供家具、衣柜、整体衣柜、榻榻米、书柜等全屋家具定制,及五大免费家具定制测量" />
-    <title>嘉宝厨柜【官方网站】-13周年专题</title>
+    <title>嘉宝厨柜【官方网站】-百城联动·长沙站</title>
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../css/font-awesome.min.css"/>
@@ -11,6 +11,36 @@
     <link rel="stylesheet" href="../../css/index.css" />
     <link rel="stylesheet" href="../../css/page.css"/>
     <script src="../../js/jquery-1.10.1.min.js"></script>
+    <script>
+        var auto_run;
+        function resize(){
+            var BaseWidth = document.documentElement.clientWidth;
+            var Rem = BaseWidth/32;
+            document.documentElement.style.fontSize = Rem + 'px';
+            var MarginLeft = 0;
+
+
+            auto_run = setInterval(function(){
+                MarginLeft -= .5;
+                $('.baominglist ul').css({'margin-left': MarginLeft+'rem'});
+
+
+                if( parseInt( $('.baominglist ul').css('margin-left')) < -200 * Rem){
+                    MarginLeft = 0;
+                }
+            },133);
+        }
+        resize();
+        window.onresize = function(){
+            clearInterval(auto_run);
+            resize();
+
+        }
+
+
+
+
+    </script>
     <style>
         .allWidth > div {
             width:100%;
@@ -26,6 +56,108 @@
 
         .allWidth > div >img {
             width:100%;
+        }
+        .title0 {
+            position:relative;
+            width:100%;
+            height:2.7rem;
+            background : #31adf7;
+            line-height: 2.7rem;
+            color:#fff;
+        }
+        .title0 .newGet {
+            width:10.02rem;
+            height: 3.23rem;
+            background-image: url("images/zhuanti0817-2.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            position:absolute;
+            left:0;
+            top:-.3rem;
+            z-index:10;
+
+        }
+        .title0 .baominglist {
+            width : 24.7rem;
+            height: 2.7rem;
+            position : absolute;
+            top:0;
+            right:0;
+            z-index:5;
+            overflow: hidden;
+        }
+
+        .title0 .baominglist ul {
+            height: 2.7rem;
+            width: 212rem;
+            float: left;
+            margin-left: 0;
+        }
+
+        .title0 .baominglist ul li{
+            float:left;
+            width: 21.2rem;
+            color:#fff;
+            line-height:2.7rem;
+            height: 2.7rem;
+            font-size:0.88rem;
+            text-indent: 2.8rem;
+        }
+        .title1 {
+            font-size: 2.27rem;
+            height: 7.4rem;
+            line-height: 7.4rem;
+            text-align:center;
+            color:#fff;
+            letter-spacing: 0.2rem;
+            width:100%;
+            background:#4303cb;
+        }
+        .baoming {
+            position:relative;
+            background: #4303cb;
+
+        }
+        .baoming input {
+
+            display:block;
+            width: 28.24rem;
+            height: 3.93rem;
+            margin: 0 auto 2.18rem;
+            border-radius: 0.6rem;
+            font-size:1.36rem;
+            text-indent: 4rem;
+        }
+        .baoming i {
+            position:absolute;
+            top:0.6rem;
+            left:2.3rem;
+            width:3.93rem;
+            height:3.93rem;
+            font-size:3.3rem;
+        }
+
+        .baoming i.fa-phone{
+            top:7.2rem;
+        }
+
+        .baoming .qiangxian1{
+            background-image:url("images/zhuanti0817-3_03.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 28.24rem;
+            height:5.16rem;
+            margin:0 auto;
+        }
+        .main0 .baoming > p {
+            padding: 0;
+            margin: 0;
+            height: 2.62rem;
+            line-height: 2.62rem;
+            font-size: .6rem;
+            text-align:center;
+            color: #fff;
+            letter-spacing: 0.12rem;
         }
     </style>
 
@@ -103,129 +235,103 @@
 <div class="main0">
     <div class="allWidth" style="margin-top:45px; width:100%;">
         <div style="position:relative;">
-            <img src="images/zhuantiM05_02.jpg"/>
+            <img src="images/zhuanti0817_shaoyang.jpg"/>
         </div>
-        <div style="position:relative;">
-            <img src="images/zhuantiM05_03.jpg"/>
+        <div class="title0">
+            <div class="newGet"></div>
+            <div class="baominglist">
+                <ul>
+                    <li>陈 159****3374 / 已领取免费设计</li>
+                    <li>林 187****9894 / 已领取免费设计</li>
+                    <li>曾 177****5545 / 已领取免费设计</li>
+                    <li>肖 150****1121 / 已领取免费设计</li>
+                    <li>柴 135****8046 / 已领取免费设计</li>
+                    <li>高 137****5734 / 已领取免费设计</li>
+                    <li>欧阳 159****0801 / 已领取免费设计</li>
+                    <li>李 180****4564 / 已领取免费设计</li>
+                    <li>谢 170****9879 / 已领取免费设计</li>
+                    <li>周 159****5313 / 已领取免费设计</li>
+                </ul>
+            </div>
+        </div>
+        <div class="title1">
+            优惠名额抢定
+        </div>
+        <div class="baoming">
+            <input type="text" class="elm" placeholder="请输入您的姓名" maxlength="11" minlength="11"/>
+            <i class="fa fa-user-o"></i>
+            <input type="text" class="phNub" placeholder="请输入您的电话" maxlength="11" minlength="11"/>
+            <i class="fa fa-phone"></i>
+            <div class="qiangxian1"></div>
+            <p>嘉宝承诺:为了您的利益以及我们的口碑，您的隐私将被严格保密</p>
         </div>
         <div style="position:relative;">
             <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
-                <img src="images/zhuantiM05_04.jpg"/>
+                <img src="images/zhuanti0817-10_03.jpg"/>
             </a>
         </div>
         <div style="position:relative;">
-            <img src="images/zhuantiM05_05.jpg"/>
-        </div>
-        <div style="position:relative;">
             <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
-                <img src="images/zhuantiM05_06.jpg"/>
-            </a>
-        </div>
-        <div style="position:relative;">
-            <img src="images/zhuantiM05_07.jpg"/>
-        </div>
-        <div style="position:relative;">
-            <img src="images/zhuantiM05_08.jpg"/>
-        </div>
-        <div style="position:relative;">
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
-
-                <img src="images/zhuantiM05_09.jpg"/>
+                <img src="images/zhuanti0817-10_04.jpg"/>
             </a>
         </div>
         <div style="position:relative;">
             <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
-
-            <img src="images/zhuantiM05_10.jpg"/>
+                <img src="images/zhuanti0817-10_05.jpg"/>
             </a>
         </div>
         <div style="position:relative;">
-            <img src="images/zhuantiM05_11.jpg"/>
-        </div>
-        <div style="position:relative;">
             <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
-
-            <img src="images/zhuantiM05_12.jpg"/>
+                <img src="images/zhuanti0817-10_06.jpg"/>
             </a>
         </div>
         <div style="position:relative;">
-            <img src="images/zhuantiM05_13.jpg"/>
-        </div>
-        <div style="position:relative;">
-            <img src="images/zhuantiM05_14.jpg"/>
-        </div>
-        <div style="position:relative;">
-            <img src="images/zhuantiM05_15.jpg"/>
-        </div>
-        <div style="position:relative;">
             <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
-
-            <img src="images/zhuantiM05_16.jpg"/>
-                </a>
-        </div>
-        <div style="position:relative;">
-            <img src="images/zhuantiM05_17.jpg"/>
-        </div>
-        <div style="position:relative;">
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
-
-            <img src="images/zhuantiM05_18.jpg"/>
-                </a>
-        </div>
-        <div style="position:relative;">
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
-
-            <img src="images/zhuantiM05_19.jpg"/>
-                </a>
-        </div>
-        <div style="position:relative;">
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
-
-            <img src="images/zhuantiM05_20.jpg"/>
-                </a>
-        </div>
-        <div style="position:relative;">
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
-
-            <img src="images/zhuantiM05_21.jpg"/>
-                </a>
-        </div>
-        <div style="position:relative;">
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
-
-            <img src="images/zhuantiM05_22.jpg"/>
-                </a>
-        </div>
-        <div style="position:relative;">
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
-
-            <img src="images/zhuantiM05_23.jpg"/>
-                </a>
-        </div>
-        <div style="position:relative;">
-            <a href="../products/chuguiList.html?list=01" target="_blank">
-                <img src="images/zhuantiM05_24.jpg"/>
+                <img src="images/zhuanti0817-10_07.jpg"/>
             </a>
         </div>
         <div style="position:relative;">
-            <a href="../products/chuguiList.html?list=01" target="_blank">
-            <img src="images/zhuantiM05_25.jpg"/>
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
+                <img src="images/zhuanti0817-10_08.jpg"/>
             </a>
         </div>
         <div style="position:relative;">
-            <a href="../products/chuguiList.html?list=01" target="_blank">
-            <img src="images/zhuantiM05_26.jpg"/>
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
+                <img src="images/zhuanti0817-10_09.jpg"/>
             </a>
         </div>
+        <div style="position:relative;">
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
+                <img src="images/zhuanti0817-10_10.jpg"/>
+            </a>
+        </div>
+        <div class="title1" style="letter-spacing: 0.3rem;">
+            最后抢定
+        </div>
+        <div class="baoming">
+            <input type="text" class="elm" placeholder="请输入您的姓名" maxlength="11" minlength="11"/>
+            <i class="fa fa-user-o"></i>
+            <input type="text" class="phNub" placeholder="请输入您的电话" maxlength="11" minlength="11"/>
+            <i class="fa fa-phone"></i>
+            <div class="qiangxian1"></div>
+            <p>嘉宝承诺:为了您的利益以及我们的口碑，您的隐私将被严格保密</p>
+        </div>
+        <div style="position:relative;">
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">
+                <img src="images/zhuanti0817-10_12.jpg"/>
+            </a>
+        </div>
+
     </div>
-
 </div>
+
 
 
 <div class="mainfoot">
     <p>嘉宝客户服务中心 · 24小时服务热线</p>
     <a class="call400" href="tel:400-0188-608">400-018-8608</a>
 </div>
+<p style="text-align: center; font-weight: bold; font-size: 1.6rem;">湖南嘉宝家居有限公司</p>
 <div class="mainbottom">
     <ul>
         <li>
