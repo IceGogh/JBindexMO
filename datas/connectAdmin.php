@@ -1,17 +1,17 @@
 <?php
-$con = mysqli_connect("120.24.83.142" , "test" , "Novellus2010");//é“¾æŽ¥æ•°æ®åº“
+$con = mysqli_connect("120.24.83.142" , "test" , "Novellus2010");//Á´½ÓÊý¾Ý¿â
 if(!$con){
     die("can't connect");
 }else{
-//    echo "è¿žæŽ¥æ•°æ®åº“æˆåŠŸ";
+//    echo "Á¬½ÓÊý¾Ý¿â³É¹¦";
 }
 
 $link = mysqli_select_db($con , 'membersysbase');
-mysqli_query($con ,"set names â€™utf8â€™ ");
+mysqli_query($con ,"set names ¡¯utf8¡¯ ");
 mysqli_query($con ,"set character_set_client=utf8");
 mysqli_query($con ,"set character_set_results=utf8");
 if($link){
-//    echo "<br/>"."è¿žæŽ¥æ•°æ®è¡¨æˆåŠŸ";
+//    echo "<br/>"."Á¬½ÓÊý¾Ý±í³É¹¦";
 }else{
     echo "fail";
 }
